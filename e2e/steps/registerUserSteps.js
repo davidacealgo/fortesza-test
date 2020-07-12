@@ -1,11 +1,12 @@
 /* eslint-disable no-undef */
-var {defineSupportCode, setDefaultTimeout} = require('cucumber');
-var chai = require('chai');
-var chaiAsPromised = require('chai-as-promised');
-var registerPage = require('../../pages/registerUser');
+const {defineSupportCode, setDefaultTimeout} = require('cucumber');
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
+const email = require('../../pages/email');
+const registerPage = require('../../pages/registerUser');
 
 chai.use(chaiAsPromised);
-var expect = chai.expect;
+const expect = chai.expect;
 setDefaultTimeout(60 * 1000);
 
 defineSupportCode(function({Given, When, Then}) {
@@ -30,32 +31,41 @@ defineSupportCode(function({Given, When, Then}) {
         await registerPage.setCredentials(string, string2);
       });
 
-      When('I accept terms and conditions', function () {
+      When('I accept terms and conditions', async () => {
+        await registerPage.acceptConditions();
+      });
+
+      When('I click on continue button', async () => {
+        await registerPage.SendRegistration();
+      });
+
+      When('appears confirmation email message', async () => {
+        await registerPage.codeSent();
+      });
+
+      When('I go to {string}', async (string) => {
+        await email.openMailinator(string);
+      });
+
+      When('I search confirmation code in my {string}', async (string) => {
+        await email.enterToEmail(string);
+      });
+
+      Then('I set email confirmation code', async () => {
+        await email.setCode();
+      });
+
+      Then('I click Accept button', function () {
         // Write code here that turns the phrase above into concrete actions
         return 'pending';
       });
 
-      When('I click on continue button', function () {
+      Then('I enter confirmation code', function () {
         // Write code here that turns the phrase above into concrete actions
         return 'pending';
       });
 
-      When('appears confirmation email message', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
-      });
-
-      When('I click Accept button', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
-      });
-
-      When('I enter confirmation code', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
-      });
-
-      When('I click confirm button', function () {
+      Then('I click confirm button', function () {
         // Write code here that turns the phrase above into concrete actions
         return 'pending';
       });

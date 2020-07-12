@@ -2,19 +2,33 @@
 /* eslint-disable no-undef */
 'use strict';
 
-const { browser, ExpectedConditions } = require("protractor");
+const { browser, ExpectedConditions, element } = require("protractor");
 
 var registerPage = function() {
     
-    var registerButton =  element(by.className('bigBtnReg mat-button mat-button-base'));
-    var inversionistButton = element(by.xpath('//*[@id="ripple"]/button[1]'));
-    var userEmail = element(by.id('email'));
-    var userPassword = element(by.id('password'));
+    const acceptTermsAndConditions = element(by.xpath("//*[@id='mat-checkbox-1']/label/div"));
+    const confirmEmailButton = element(by.className("button-blue"));
+    const continueButton = element(by.id("regbtn"));
+    const registerButton =  element(by.className('bigBtnReg mat-button mat-button-base'));
+    const inversionistButton = element(by.xpath('//*[@id="ripple"]/button[1]'));
+    const userEmail = element(by.id('email'));
+    const userPassword = element(by.id('password'));
+
+    this.acceptConditions = async function() {
+        await browser.wait(ExpectedConditions.elementToBeClickable(acceptTermsAndConditions), 5000);
+        acceptTermsAndConditions.click();
+        //return await acceptTermsAndConditions.getAttribute("aria-checked");
+        await browser.sleep(6000);
+    }
+
+    this.SendRegistration = async function() {
+        await browser.wait(ExpectedConditions.elementToBeClickable(continueButton), 5000);
+        continueButton.click();
+    }
 
     this.clickInversionistButton = async function() {
         await browser.wait(ExpectedConditions.elementToBeClickable(inversionistButton), 5000);
-        await inversionistButton.click();
-        browser.sleep(5000);
+        inversionistButton.click();
     }
 
     this.clickRegisterButton = async function() {
@@ -22,7 +36,11 @@ var registerPage = function() {
         browser.waitForAngularEnabled(false);
         await browser.wait(ExpectedConditions.elementToBeClickable(registerButton), 5000);
         await registerButton.click();
-        //await browser.sleep(5000);
+    }
+
+    this.codeSent = async function() {
+        await browser.wait(ExpectedConditions.elementToBeClickable(confirmEmailButton), 5000);
+        confirmEmailButton.click();
     }
 
     this.get = async function(url) {

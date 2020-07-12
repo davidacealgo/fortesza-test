@@ -13,11 +13,15 @@ Scenario Outline: Register a new user
     And I accept terms and conditions
     And I click on continue button
     And appears confirmation email message
+    And I go to "<mailinator>"
+    And I search confirmation code in my "<email>"
+    Then I set email confirmation code
     And I click Accept button
     And I enter confirmation code
     And I click confirm button
-    Then user is created
+    And user is created
 
 Examples:
-| url | email | password |
-| https://staging.fortesza.com | fortesza-test@mailinator.com | 12345678 |
+| url | email | password | mailinator |
+| https://staging.fortesza.com | fortesza-test8@mailinator.com | 12345678 | https://www.mailinator.com/ |
+

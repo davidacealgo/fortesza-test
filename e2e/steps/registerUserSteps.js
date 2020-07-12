@@ -7,7 +7,8 @@ const registerPage = require('../../pages/registerUser');
 
 chai.use(chaiAsPromised);
 const expect = chai.expect;
-setDefaultTimeout(60 * 1000);
+let code = "";
+setDefaultTimeout(120 * 1000);
 
 defineSupportCode(function({Given, When, Then}) {
 
@@ -43,35 +44,24 @@ defineSupportCode(function({Given, When, Then}) {
         await registerPage.codeSent();
       });
 
-      When('I go to {string}', async (string) => {
-        await email.openMailinator(string);
-      });
-
       When('I search confirmation code in my {string}', async (string) => {
         await email.enterToEmail(string);
       });
 
       Then('I set email confirmation code', async () => {
-        await email.setCode();
+        code = await email.setCode();
+        console.log(code);
       });
 
-      Then('I click Accept button', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
+      Then('I enter confirmation code', async () => {
+        await registerPage.sendCode(code);
       });
 
-      Then('I enter confirmation code', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
+      Then('I click confirm button', async () => {
+        await registerPage.confirmRegistration();
       });
 
-      Then('I click confirm button', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
-      });
-
-      Then('user is created', function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
+      Then('user is created', async () => {
+        await registerPage.userCreated();
       });
 });

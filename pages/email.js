@@ -7,27 +7,29 @@ const { browser, ExpectedConditions, element } = require("protractor");
 
 let emailPage = function() {
 
-    const inputEmail = element(by.xpath("/html/body/header/div[1]/div/div/div[2]/div/div/input"));
-    const emailRow = element(by.xpath("//*[@id='inboxpane']/div/div/div/table/tbody/tr"));
+    const goButton = element(by.id("go-to-public"));
+    const emailRow = element(by.xpath("//*[@id='inboxpane']/div/div/div/table/tbody/tr/td[3]"));
     const emailCode = element(by.xpath("/html/body/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td/table/tbody/tr[3]/td/p[3]/strong"));
-
-    this.openMailinator = async function(url) {
-        browser.ignoreSynchronization = true;
-        browser.waitForAngularEnabled(false);
-        browser.executeScript(`window.open("${url}")`);
-    };
+    const iframe = element(by.id("msg_body"))
+    const inboxfield = element(by.id("addOverlay"));
 
     this.enterToEmail = async function(email) {
-        await browser.wait(ExpectedConditions.visibilityOf(inputEmail), 5000);
-        await inputEmail.sendKeys(email);
-        browser.actions().sendKeys(protractor.Key.ENTER).perform();
+        browser.executeScript(`window.open("https://www.mailinator.com/v3/index.jsp?zone=public&query=${email}#/#inboxpane")`);;
     }
 
     this.setCode = async function() {
-        await browser.wait(ExpectedConditions.elementToBeClickable(emailRow), 5000);
+        let windows =  await browser.getAllWindowHandles();
+        await browser.switchTo().window(windows[1]);
+        await browser.wait(ExpectedConditions.elementToBeClickable(emailRow), 60000);
         emailRow.click();
-        await browser.wait(ExpectedConditions.elementToBeClickable(emailCode), 5000);
-        console.log(emailCode);
+        const frame = iframe.getWebElement();
+        browser.switchTo().frame(frame);
+        await browser.wait(ExpectedConditions.presenceOf(emailCode), 35000);
+        const str = emailCode.getText().then((text) => {
+            return(text.substring(text.length -4)); 
+        });
+        //const subCode = str.substring((await str).length - 4);
+        return str;
     }
 }
 

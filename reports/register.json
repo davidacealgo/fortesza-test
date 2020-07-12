@@ -11,7 +11,7 @@
       {
         "id": "register-a-user-in-fortesza-website;register-a-new-user",
         "keyword": "Scenario",
-        "line": 26,
+        "line": 24,
         "name": "Register a new user",
         "tags": [],
         "type": "scenario",
@@ -22,11 +22,11 @@
             "line": 6,
             "name": "I navigate to \"https://staging.fortesza.com\"",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:14"
+              "location": "e2e\\steps\\registerUserSteps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 5368000000
+              "duration": 5495000000
             }
           },
           {
@@ -35,11 +35,11 @@
             "line": 9,
             "name": "I click Register option",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:18"
+              "location": "e2e\\steps\\registerUserSteps.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 105000000
+              "duration": 113000000
             }
           },
           {
@@ -48,11 +48,11 @@
             "line": 10,
             "name": "I am on Register page",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:22"
+              "location": "e2e\\steps\\registerUserSteps.js:23"
             },
             "result": {
               "status": "passed",
-              "duration": 206000000
+              "duration": 197000000
             }
           },
           {
@@ -61,7 +61,7 @@
             "line": 11,
             "name": "I click Inversionist option",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:26"
+              "location": "e2e\\steps\\registerUserSteps.js:27"
             },
             "result": {
               "status": "passed"
@@ -71,13 +71,13 @@
             "arguments": [],
             "keyword": "When ",
             "line": 12,
-            "name": "I enter \"fortesza-test8@mailinator.com\" and \"12345678\"",
+            "name": "I enter \"fortesza-test92@mailinator.com\" and \"12345678\"",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:30"
+              "location": "e2e\\steps\\registerUserSteps.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 313000000
+              "duration": 354000000
             }
           },
           {
@@ -86,11 +86,11 @@
             "line": 13,
             "name": "I accept terms and conditions",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:34"
+              "location": "e2e\\steps\\registerUserSteps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 6151000000
+              "duration": 85000000
             }
           },
           {
@@ -99,11 +99,11 @@
             "line": 14,
             "name": "I click on continue button",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:38"
+              "location": "e2e\\steps\\registerUserSteps.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 97000000
+              "duration": 91000000
             }
           },
           {
@@ -112,98 +112,75 @@
             "line": 15,
             "name": "appears confirmation email message",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:42"
+              "location": "e2e\\steps\\registerUserSteps.js:43"
             },
             "result": {
               "status": "passed",
-              "duration": 2022000000
+              "duration": 1650000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "I go to \"https://www.mailinator.com/\"",
+            "name": "I search confirmation code in my \"fortesza-test92\"",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:46"
+              "location": "e2e\\steps\\registerUserSteps.js:47"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "I search confirmation code in my \"fortesza-test8@mailinator.com\"",
-            "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:50"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 5110000000,
-              "error_message": "TimeoutError: Wait timed out after 5106ms\n    at C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\node_modules\\selenium-webdriver\\lib\\promise.js:2201:17\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)"
+              "status": "passed"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 18,
+            "line": 17,
             "name": "I set email confirmation code",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:54"
+              "location": "e2e\\steps\\registerUserSteps.js:51"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 33854000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter confirmation code",
+            "match": {
+              "location": "e2e\\steps\\registerUserSteps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I click Accept button",
+            "name": "I click confirm button",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:58"
+              "location": "e2e\\steps\\registerUserSteps.js:60"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 4099000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I enter confirmation code",
-            "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:63"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 21,
-            "name": "I click confirm button",
-            "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:68"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
             "name": "user is created",
             "match": {
-              "location": "e2e\\steps\\registerUserSteps.js:73"
+              "location": "e2e\\steps\\registerUserSteps.js:64"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 522000000
             }
           },
           {

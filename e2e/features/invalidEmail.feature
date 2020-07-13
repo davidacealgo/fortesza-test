@@ -10,7 +10,7 @@ Background:
 
 Scenario Outline: Invalid email
     Given I enter an ivalid "<invalidEmail>" and "<password>"
-    And I accept terms and conditions
+    And I accept terms and conditions of the form
     When I click continue button
     Then appears an error message of invalid email
     

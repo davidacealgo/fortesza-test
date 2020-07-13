@@ -9,8 +9,7 @@ let invalidEmailPage = function() {
 
     this.errorMessage = async function() {
         await browser.sleep(2000);
-        await browser.wait(ExpectedConditions.presenceOf(errorAlert), 5000);
-        //return errorAlert.isDisplayed();
+        await browser.wait(ExpectedConditions.invisibilityOf(errorAlert), 5000);
     }
 }
 

@@ -1,12 +1,8 @@
 /* eslint-disable no-undef */
 const {defineSupportCode, setDefaultTimeout} = require('cucumber');
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
 const email = require('../../pages/email');
 const registerPage = require('../../pages/registerUser');
 
-chai.use(chaiAsPromised);
-const expect = chai.expect;
 let code = "";
 setDefaultTimeout(120 * 1000);
 

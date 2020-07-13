@@ -21,4 +21,4 @@ Scenario Outline: Register a new user
 
 Examples:
 | url | email | password | mailinator | mailinatoremail |
-| https://staging.fortesza.com | fortesza-test98@mailinator.com | 12345678 | https://www.mailinator.com | fortesza-test98 |
+| https://staging.fortesza.com | fortesza-test0@mailinator.com | 12345678 | https://www.mailinator.com | fortesza-test0 |

@@ -26,7 +26,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5230000000
+              "duration": 5242000000
             }
           },
           {
@@ -39,7 +39,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 147000000
+              "duration": 114000000
             }
           },
           {
@@ -52,7 +52,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 193000000
+              "duration": 195000000
             }
           },
           {
@@ -74,24 +74,24 @@
             "line": 12,
             "name": "I enter an ivalid \"example@example\" and \"12345678\"",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:14"
+              "location": "e2e\\steps\\invalidEmailSteps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 243000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I accept terms and conditions",
+            "name": "I accept terms and conditions of the form",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:18"
+              "location": "e2e\\steps\\invalidEmailSteps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 154000000
             }
           },
           {
@@ -100,11 +100,11 @@
             "line": 14,
             "name": "I click continue button",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:22"
+              "location": "e2e\\steps\\invalidEmailSteps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 112000000
             }
           },
           {
@@ -113,12 +113,12 @@
             "line": 15,
             "name": "appears an error message of invalid email",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:26"
+              "location": "e2e\\steps\\invalidEmailSteps.js:22"
             },
             "result": {
               "status": "failed",
-              "duration": 1000000,
-              "error_message": "TypeError: Cannot read property 'errorMessage' of undefined\n    at World.<anonymous> (C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\e2e\\steps\\invalidEmailSteps.js:27:32)"
+              "duration": 2000000,
+              "error_message": "TypeError: Cannot read property 'errorMessage' of undefined\n    at World.<anonymous> (C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\e2e\\steps\\invalidEmailSteps.js:23:32)"
             }
           },
           {
@@ -152,7 +152,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 734000000
+              "duration": 618000000
             }
           },
           {
@@ -165,7 +165,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 286000000
+              "duration": 134000000
             }
           },
           {
@@ -178,7 +178,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 163000000
+              "duration": 95000000
             }
           },
           {
@@ -199,22 +199,24 @@
             "line": 12,
             "name": "I enter an ivalid \"@example.com\" and \"123467\"",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:14"
+              "location": "e2e\\steps\\invalidEmailSteps.js:10"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 207000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I accept terms and conditions",
+            "name": "I accept terms and conditions of the form",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:18"
+              "location": "e2e\\steps\\invalidEmailSteps.js:14"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 110000000
             }
           },
           {
@@ -223,10 +225,11 @@
             "line": 14,
             "name": "I click continue button",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:22"
+              "location": "e2e\\steps\\invalidEmailSteps.js:18"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 80000000
             }
           },
           {
@@ -235,12 +238,12 @@
             "line": 15,
             "name": "appears an error message of invalid email",
             "match": {
-              "location": "e2e\\steps\\invalidEmailSteps.js:26"
+              "location": "e2e\\steps\\invalidEmailSteps.js:22"
             },
             "result": {
               "status": "failed",
               "duration": 1000000,
-              "error_message": "TypeError: Cannot read property 'errorMessage' of undefined\n    at World.<anonymous> (C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\e2e\\steps\\invalidEmailSteps.js:27:32)"
+              "error_message": "TypeError: Cannot read property 'errorMessage' of undefined\n    at World.<anonymous> (C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\e2e\\steps\\invalidEmailSteps.js:23:32)"
             }
           },
           {

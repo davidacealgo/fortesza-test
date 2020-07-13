@@ -4,7 +4,7 @@
 
 const { browser, ExpectedConditions, element } = require("protractor");
 
-var commonPage = function() {
+let commonPage = function() {
     
     const registerButton =  element(by.className('bigBtnReg mat-button mat-button-base'));
     const inversionistButton = element(by.xpath('//*[@id="ripple"]/button[1]'));

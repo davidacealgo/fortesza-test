@@ -42,8 +42,8 @@ exports.config = {
     } ,
     //Create html report 
     onComplete: () => {
-        var reporter = require('cucumber-html-reporter');
-        var options = {
+        const reporter = require('cucumber-html-reporter');
+        const options = {
             theme: 'bootstrap',
             jsonFile: './reports/register.json',
             output: './reports/registerUser.html',

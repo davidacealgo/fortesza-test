@@ -4,7 +4,7 @@
 
 const { browser, ExpectedConditions, element } = require("protractor");
 
-var registerPage = function() {
+let registerPage = function() {
     
     const acceptTermsAndConditions = element(by.xpath("//*[@id='mat-checkbox-1']/label/div"));
     const confirmEmailButton = element(by.className("button-blue"));

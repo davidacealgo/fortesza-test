@@ -1,0 +1,260 @@
+[
+  {
+    "description": "    As a user\n    I want to send an invalid email in the register menu",
+    "keyword": "Feature",
+    "name": "Send an invalid email to register menu",
+    "line": 1,
+    "id": "send-an-invalid-email-to-register-menu",
+    "tags": [],
+    "uri": "e2e\\features\\invalidEmail.feature",
+    "elements": [
+      {
+        "id": "send-an-invalid-email-to-register-menu;invalid-email",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Invalid email",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to \"https://staging.fortesza.com\"",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I click Register option",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on Register page",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 193000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click Inversionist option",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I enter an ivalid \"example@example\" and \"12345678\"",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I accept terms and conditions",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click continue button",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "appears an error message of invalid email",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:26"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "TypeError: Cannot read property 'errorMessage' of undefined\n    at World.<anonymous> (C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\e2e\\steps\\invalidEmailSteps.js:27:32)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "send-an-invalid-email-to-register-menu;invalid-email",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Invalid email",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to \"https://staging.fortesza.com\"",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 734000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I click Register option",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 286000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on Register page",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click Inversionist option",
+            "match": {
+              "location": "e2e\\steps\\commonSteps.js:25"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I enter an ivalid \"@example.com\" and \"123467\"",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:14"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I accept terms and conditions",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:18"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click continue button",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:22"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "appears an error message of invalid email",
+            "match": {
+              "location": "e2e\\steps\\invalidEmailSteps.js:26"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "TypeError: Cannot read property 'errorMessage' of undefined\n    at World.<anonymous> (C:\\Users\\daag1\\OneDrive\\Documentos\\fortesza-test\\e2e\\steps\\invalidEmailSteps.js:27:32)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

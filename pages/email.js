@@ -28,7 +28,6 @@ let emailPage = function() {
         const str = emailCode.getText().then((text) => {
             return(text.substring(text.length -4)); 
         });
-        //const subCode = str.substring((await str).length - 4);
         return str;
     }
 }

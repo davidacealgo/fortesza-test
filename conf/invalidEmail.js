@@ -21,19 +21,18 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     specs: [
-        '../e2e/features/register.feature'
+        '../e2e/features/invalidEmail.feature'
     ],
     coloredLogs: true,
 
     cucumberOpts: {
         require: [
             '../e2e/steps/commonSteps.js',
-            '../e2e/steps/registerUserSteps.js',
             '../e2e/steps/invalidEmailSteps.js'
         ],
         profile: false,
         tags: false,
-        format: 'json:./reports/register.json'
+        format: 'json:./reports/invalidEmail.json'
     },
     seleniumServerStartTimeout: 9000,
     //just maximizing window before testing
@@ -45,8 +44,8 @@ exports.config = {
         var reporter = require('cucumber-html-reporter');
         var options = {
             theme: 'bootstrap',
-            jsonFile: './reports/register.json',
-            output: './reports/registerUser.html',
+            jsonFile: './reports/invalidEmail.json',
+            output: './reports/invalidEmail.html',
             reportSuiteAsScenarios: true,
             launchReport: true,
             metadata: {

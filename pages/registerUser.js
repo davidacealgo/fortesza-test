@@ -9,8 +9,6 @@ var registerPage = function() {
     const acceptTermsAndConditions = element(by.xpath("//*[@id='mat-checkbox-1']/label/div"));
     const confirmEmailButton = element(by.className("button-blue"));
     const continueButton = element(by.id("regbtn"));
-    const registerButton =  element(by.className('bigBtnReg mat-button mat-button-base'));
-    const inversionistButton = element(by.xpath('//*[@id="ripple"]/button[1]'));
     const userEmail = element(by.id('email'));
     const userPassword = element(by.id('password'));
     const enterCode = element(by.id("code"));
@@ -27,32 +25,9 @@ var registerPage = function() {
         continueButton.click();
     }
 
-    this.clickInversionistButton = async function() {
-        await browser.wait(ExpectedConditions.elementToBeClickable(inversionistButton), 5000);
-        inversionistButton.click();
-    }
-
-    this.clickRegisterButton = async function() {
-        browser.ignoreSynchronization = true;
-        browser.waitForAngularEnabled(false);
-        await browser.wait(ExpectedConditions.elementToBeClickable(registerButton), 5000);
-        await registerButton.click();
-    }
-
     this.codeSent = async function() {
         await browser.wait(ExpectedConditions.elementToBeClickable(confirmEmailButton), 5000);
         confirmEmailButton.click();
-    }
-
-    this.get = async function(url) {
-        browser.ignoreSynchronization = true;
-        browser.waitForAngularEnabled(false);
-        await browser.get(url);
-    };
-
-    this.isRegisterPage = async function() {
-        await browser.wait(ExpectedConditions.visibilityOf(inversionistButton), 8000);
-        return inversionistButton.isDisplayed();
     }
 
     this.setCredentials = async function(email, password) {
@@ -63,6 +38,7 @@ var registerPage = function() {
     };
 
     this.sendCode = async function(code) {
+        browser.close();
         let windows =  await browser.getAllWindowHandles();
         await browser.switchTo().window(windows[0]);
         await browser.wait(ExpectedConditions.presenceOf(enterCode), 5000);
